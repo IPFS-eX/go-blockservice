@@ -15,6 +15,8 @@ import (
 	exchange "github.com/ipfs/go-ipfs-exchange-interface"
 	logging "github.com/ipfs/go-log"
 	"github.com/ipfs/go-verifcid"
+
+	"github.com/libp2p/go-libp2p-core/peer"
 )
 
 var log = logging.Logger("blockservice")
@@ -53,6 +55,7 @@ type BlockService interface {
 	// AddBlock puts a given block to the underlying datastore
 	AddBlock(o blocks.Block) error
 
+	Push(context.Context, uint32, peer.ID, cid.Cid) error
 	// AddBlocks adds a slice of blocks at the same time using batching
 	// capabilities of the underlying datastore whenever possible.
 	AddBlocks(bs []blocks.Block) error
@@ -126,6 +129,10 @@ func NewSession(ctx context.Context, bs BlockService) *Session {
 		sessCtx: ctx,
 		bs:      bs.Blockstore(),
 	}
+}
+
+func (s *blockService) Push(ctx context.Context, num uint32, peer peer.ID, c cid.Cid) error {
+	return s.exchange.Push(ctx, num, peer, c)
 }
 
 // AddBlock adds a particular block to the service, Putting it into the datastore.
