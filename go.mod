@@ -1,4 +1,4 @@
-module github.com/ipfs/go-blockservice
+module github.com/ETHFSx/go-blockservice
 
 go 1.13
 
@@ -16,4 +16,5 @@ require (
 	github.com/ipfs/go-ipfs-util v0.0.1
 	github.com/ipfs/go-log v0.0.1
 	github.com/ipfs/go-verifcid v0.0.1
+	github.com/libp2p/go-libp2p-core v0.0.3
 )
