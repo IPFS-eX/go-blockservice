@@ -9,8 +9,8 @@ import (
 	dssync "github.com/ipfs/go-datastore/sync"
 	blockstore "github.com/ipfs/go-ipfs-blockstore"
 	butil "github.com/ipfs/go-ipfs-blocksutil"
-	exchange "github.com/ipfs/go-ipfs-exchange-interface"
-	offline "github.com/ipfs/go-ipfs-exchange-offline"
+	exchange "github.com/ETHFSx/go-ipfs-exchange-interface"
+	offline "github.com/ETHFSx/go-ipfs-exchange-offline"
 )
 
 func TestWriteThroughWorks(t *testing.T) {
