@@ -4,7 +4,7 @@ go 1.13
 
 require (
 	github.com/ETHFSx/go-ipfs-exchange-interface v0.0.2
-	github.com/ETHFSx/go-ipfs-exchange-offline v0.0.2
+	github.com/ETHFSx/go-ipfs-exchange-offline v0.0.2-rc.0
 	github.com/ipfs/go-bitswap v0.1.8
 	github.com/ipfs/go-block-format v0.0.2
 	//github.com/ipfs/go-blockservice v0.1.3
