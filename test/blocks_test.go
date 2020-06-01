@@ -7,7 +7,7 @@ import (
 	"testing"
 	"time"
 
-	. "github.com/ETHFSx/go-blockservice"
+	. "github.com/IPFS-eX/go-blockservice"
 
 	blocks "github.com/ipfs/go-block-format"
 	cid "github.com/ipfs/go-cid"

@@ -9,7 +9,7 @@ import (
 	"io"
 	"sync"
 
-	exchange "github.com/ETHFSx/go-ipfs-exchange-interface"
+	exchange "github.com/IPFS-eX/go-ipfs-exchange-interface"
 	blocks "github.com/ipfs/go-block-format"
 	cid "github.com/ipfs/go-cid"
 	blockstore "github.com/ipfs/go-ipfs-blockstore"
